@@ -1,7 +1,7 @@
 # AI Resume Screening Tool
 
 An AI-powered Resume Screening system that analyzes resumes against a Job Description (JD) and calculates a relevance score using NLP and similarity techniques.  
-The project is designed with a modular backend-first approach and can be extended into a full production-grade API.
+
 
 ## 🚀 Features
 
@@ -63,8 +63,8 @@ The project is designed with a modular backend-first approach and can be extende
 
 ## 🧪 Similarity Logic
 
-- **60% weight:** Ollama/TF-IDF(Optional) + Cosine Similarity  
-- **40% weight:** Keyword match percentage  
+- **Ollama/TF-IDF(Optional) + Cosine Similarity **
+- ** Keyword match percentage **
 
 This hybrid approach improves accuracy compared to keyword-only matching.
 
@@ -92,4 +92,4 @@ Intern – Artificial Intelligence & Data Science
 ## ⚠️ Disclaimer
 
 This project is built for learning and internship purposes.  
-AI-assisted development tools were used, and the logic is fully understood and modifiable.
+All logic is implemented with a clear understanding and can be modified as per organizational requirements
