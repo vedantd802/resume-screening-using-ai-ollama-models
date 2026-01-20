@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+ollama
+pdfminer.six
+Pillow
+pytesseract
+python-docx
+python-pptx
+scikit-learn
+PyPDF2
