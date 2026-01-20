@@ -1,1 +1,1 @@
-# resume-screening-using-ollama-
+# AI Resume Agent Tool
