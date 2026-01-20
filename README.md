@@ -5,6 +5,8 @@ The project is designed with a modular backend-first approach and can be extende
 
 ## 🚀 Features
 
+-Currently App Is Running Using Streamlit As The Project Is On Hands on purpose
+
 - 📄 Supports multiple resume formats:
   - PDF
   - DOCX
