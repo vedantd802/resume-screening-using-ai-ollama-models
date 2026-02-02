@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard] 
+python-multipart
+pandas
+numpy
+ollama
+pdfminer.six
+Pillow
+pytesseract
+python-docx
+scikit-learn
+PyPDF2
+pypdf
+passlib[bcrypt]
+python-jose[cryptography]
