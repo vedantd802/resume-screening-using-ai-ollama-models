@@ -2,10 +2,8 @@
 
 An AI-powered Resume Screening system that analyzes resumes against a Job Description (JD) and calculates a relevance score using NLP and similarity techniques.  
 
-
 ## 🚀 Features
 
--Currently App Is Running Using Streamlit As The Project Is On Hands on purpose
 
 - 📄 Supports multiple resume formats:
   - PDF
@@ -28,23 +26,40 @@ An AI-powered Resume Screening system that analyzes resumes against a Job Descri
 - 🧩 Modular architecture for easy refactoring and scaling
 
 ---
+## 🚀 Features
 
-## 🛠️ Tech Stack
-
-- **Language:** Python  
-- **Core Libraries:**
-  - scikit-learn
-  - numpy
-  - pandas
-  - pdfminer / PyPDF2
-  - pytesseract (OCR)
-- **AI / LLM **
-  - Ollama (Qwen:0.5b)(local LLM)// According To Parameter
-- **Architecture:**
-  - Modular Python backend
-  - API-ready (FastAPI compatible)
+- User authentication with **JWT tokens**  
+- Upload resumes individually or in batch (`PDF` / `DOCX`)  
+- Drag & drop file upload support  
+- View candidate analysis results with scores  
+- Filter shortlisted candidates only  
+- Sort results by score  
+- Configurable batch size and parallel processing  
+- FastAPI backend with **asynchronous processing**  
+- React frontend with responsive UI  
 
 ---
+
+## 🧰 Tech Stack
+
+- **Frontend:** React, Axios, Tailwind CSS (optional)  
+- **Backend:** Python, FastAPI, Uvicorn  
+- **Authentication:** JWT  
+- **Database / Storage:** (Optional – can use file system or database)  
+- **AI/ML:** Resume scoring / NLP-based analysis  
+- **Other:** npm for frontend package management, Redis (optional) for caching  
+
+---
+
+## 📦 Installation
+
+### Backend (FastAPI)
+
+1. Clone the repo:
+```bash
+git clone <repo-url>
+cd resume-screener-backend
+
 
 ## 📁 Project Structure
 
@@ -65,19 +80,6 @@ An AI-powered Resume Screening system that analyzes resumes against a Job Descri
 
 - **Ollama/TF-IDF(Optional) + Cosine Similarity **
 - ** Keyword match percentage **
-
-This hybrid approach improves accuracy compared to keyword-only matching.
-
----
-
-## 🔮 Future Enhancements
-
-- Convert to FastAPI-based REST service
-- Database integration for resume storage
-- Improved experience extraction
-- Model-based classification (Selected / Rejected)
-- Admin dashboard for recruiters
-- Authentication & role-based access
 
 ---
 
