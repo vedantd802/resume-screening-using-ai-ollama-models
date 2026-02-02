@@ -2,32 +2,29 @@
 
 An AI-powered Resume Screening system that analyzes resumes against a Job Description (JD) and calculates a relevance score using NLP and similarity techniques.  
 
-## 🚀 Features
-
-
-- 📄 Supports multiple resume formats:
-  - PDF
-  - DOCX
-  - TXT
-  - Images (OCR)
-  - CSV
-    
-- 🔍 Extracts key information:
-  - Candidate name
-  - Email ID
-  - Phone number
-  - Skills
-  - Experience (basic)
-- 📊 Resume–Job Description matching:
-  - TF-IDF + Cosine Similarity(For Hybrid Matching /If Ollama Fails Model Still Runs)
-  - Keyword overlap scoring
-- 🤖 Optional LLM-based keyword extraction (Ollama)
-- 🧠 Fallback logic if AI/ML libraries are unavailable
-- 🧩 Modular architecture for easy refactoring and scaling
-
 ---
+
 ## 🚀 Features
 
+- 📄 **Supports multiple resume formats**:
+  - PDF, DOCX, TXT, Images (OCR), CSV, PPTX
+- 🔍 **Extracts key information**:
+  - Candidate name, Email ID, Phone number, Skills, Experience (basic)
+- 📊 **Resume–Job Description matching**:
+  - TF-IDF + Cosine Similarity (fallback if Ollama fails)
+  - Keyword overlap scoring
+- 🤖 **Optional LLM-based keyword extraction** (Ollama)
+- 🧠 **Fallback logic** if AI/ML libraries are unavailable
+- 🧩 **Modular architecture** for easy refactoring and scaling
+- 🔑 **User authentication** with JWT tokens
+- 📤 Upload resumes individually or in batch (PDF / DOCX)
+- 🎯 Drag & drop file upload support
+- 📈 View candidate analysis results with scores
+- ✅ Filter shortlisted candidates only
+- 🔢 Sort results by score
+- ⚙️ Configurable batch size and parallel processing
+- ⚡ FastAPI backend with asynchronous processing
+- 🖥 Responsive React frontend UI
 
 ---
 
@@ -36,7 +33,7 @@ An AI-powered Resume Screening system that analyzes resumes against a Job Descri
 - **Frontend:** React, Axios, Tailwind CSS (optional)  
 - **Backend:** Python, FastAPI, Uvicorn  
 - **Authentication:** JWT  
-- **Database / Storage:** (Optional – can use file system or database)  
+- **Database / Storage:** Optional (file system or database)  
 - **AI/ML:** Resume scoring / NLP-based analysis  
 - **Other:** npm for frontend package management, Redis (optional) for caching  
 
@@ -46,47 +43,10 @@ An AI-powered Resume Screening system that analyzes resumes against a Job Descri
 
 ### Backend (FastAPI)
 
-1. Clone the repo:
+1. Clone the repository:
 ```bash
 git clone <repo-url>
 cd resume-screener-backend
-
-
-## 📁 Project Structure
-
-resume-screener/
-│
-├─ backend/
-│  ├─ main.py
-│  ├─ api/
-│  ├─ models/
-│  └─ requirements.txt
-│
-├─ frontend/
-│  ├─ src/
-│  │  ├─ components/
-│  │  ├─ pages/
-│  │  └─ App.js
-│  └─ package.json
-│
-└─ README.md
-
----
-
-## ⚙️ How It Works
-
-1. Resume text is extracted based on file type (PDF, DOCX, Image, etc.)
-2. Text is cleaned and normalized
-3. Important keywords and skills are extracted
-4. Resume content is compared with the Job Description
-5. A final relevance score is generated based on similarity
-
----
-
-## 🧪 Similarity Logic
-
-- **Ollama/TF-IDF(Optional) + Cosine Similarity **
-- ** Keyword match percentage **
 
 ---
 
