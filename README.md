@@ -28,15 +28,6 @@ An AI-powered Resume Screening system that analyzes resumes against a Job Descri
 ---
 ## 🚀 Features
 
-- User authentication with **JWT tokens**  
-- Upload resumes individually or in batch (`PDF` / `DOCX`)  
-- Drag & drop file upload support  
-- View candidate analysis results with scores  
-- Filter shortlisted candidates only  
-- Sort results by score  
-- Configurable batch size and parallel processing  
-- FastAPI backend with **asynchronous processing**  
-- React frontend with responsive UI  
 
 ---
 
