@@ -7,7 +7,7 @@ An AI-powered Resume Screening system that analyzes resumes against a Job Descri
 ## 🚀 Features
 
 - 📄 **Supports multiple resume formats**:
-  - PDF, DOCX, TXT, Images (OCR), CSV, PPTX
+  - PDF, DOCX, TXT, Images (OCR), CSV.
 - 🔍 **Extracts key information**:
   - Candidate name, Email ID, Phone number, Skills, Experience (basic)
 - 📊 **Resume–Job Description matching**:
