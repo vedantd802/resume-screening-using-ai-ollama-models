@@ -63,6 +63,22 @@ cd resume-screener-backend
 
 ## 📁 Project Structure
 
+resume-screener/
+│
+├─ backend/
+│  ├─ main.py
+│  ├─ api/
+│  ├─ models/
+│  └─ requirements.txt
+│
+├─ frontend/
+│  ├─ src/
+│  │  ├─ components/
+│  │  ├─ pages/
+│  │  └─ App.js
+│  └─ package.json
+│
+└─ README.md
 
 ---
 
