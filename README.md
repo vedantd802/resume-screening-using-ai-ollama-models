@@ -11,7 +11,7 @@ An AI-powered Resume Screening system that analyzes resumes against a Job Descri
   - TXT
   - Images (OCR)
   - CSV
-  - PPTX
+    
 - 🔍 Extracts key information:
   - Candidate name
   - Email ID
