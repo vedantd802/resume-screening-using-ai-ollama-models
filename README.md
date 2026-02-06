@@ -45,7 +45,7 @@ An AI-powered Resume Screening system that analyzes resumes against a Job Descri
 
 1. Clone the repository:
 ```bash
-git clone <repo-url>
+git clone <https://github.com/vedantd802/resume-screening-using-ai-ollama-models.git>
 cd resume-screener-backend
 
 ---
