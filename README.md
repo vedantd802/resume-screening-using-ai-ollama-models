@@ -113,7 +113,7 @@ AI/NLP: Embeddings, TF-IDF, similarity scoring
 
 Storage: File system / optional database
 
-Caching (optional): Redis
+
 
 📦 Installation
 Backend (FastAPI)
