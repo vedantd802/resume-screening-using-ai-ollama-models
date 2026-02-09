@@ -1,64 +1,156 @@
-# AI Resume Screening Tool
+AI Resume Screening Tool
 
-An AI-powered Resume Screening system that analyzes resumes against a Job Description (JD) and calculates a relevance score using NLP and similarity techniques.  
+An AI-powered Resume Screening system that analyzes candidate resumes against a Job Description (JD) and calculates a relevance score using NLP, embeddings, and similarity techniques. The system is designed to be modular, scalable, and suitable for real-world hiring workflows.
 
----
+🎯 Problem Statement
 
-## 🚀 Features
+Manual resume screening is time-consuming, inconsistent, and error-prone. Recruiters often struggle to quickly identify the most relevant candidates from a large pool of resumes.
 
-- 📄 **Supports multiple resume formats**:
-  - PDF, DOCX, TXT, Images (OCR), CSV.
-- 🔍 **Extracts key information**:
-  - Candidate name, Email ID, Phone number, Skills, Experience (basic)
-- 📊 **Resume–Job Description matching**:
-  - TF-IDF + Cosine Similarity (fallback if Ollama fails)
-  - Keyword overlap scoring
-- 🤖 **Optional LLM-based keyword extraction** (Ollama)
-- 🧠 **Fallback logic** if AI/ML libraries are unavailable
-- 🧩 **Modular architecture** for easy refactoring and scaling
-- 🔑 **User authentication** with JWT tokens
-- 📤 Upload resumes individually or in batch (PDF / DOCX)
-- 🎯 Drag & drop file upload support
-- 📈 View candidate analysis results with scores
-- ✅ Filter shortlisted candidates only
-- 🔢 Sort results by score
-- ⚙️ Configurable batch size and parallel processing
-- ⚡ FastAPI backend with asynchronous processing
-- 🖥 Responsive React frontend UI
+This project automates resume screening by:
 
----
+Extracting structured information from resumes
 
-## 🧰 Tech Stack
+Comparing resumes against a job description using semantic similarity
 
-- **Frontend:** React, Axios, Tailwind CSS (optional)  
-- **Backend:** Python, FastAPI, Uvicorn  
-- **Authentication:** JWT  
-- **Database / Storage:** Optional (file system or database)  
-- **AI/ML:** Resume scoring / NLP-based analysis  
-- **Other:** npm for frontend package management, Redis (optional) for caching  
+Generating relevance scores to assist shortlisting decisions
 
----
+🚀 Features
 
-## 📦 Installation
+📄 Supports multiple resume formats
 
-### Backend (FastAPI)
+PDF, DOCX, TXT, Images (OCR), CSV
 
-1. Clone the repository:
-```bash
-git clone <https://github.com/vedantd802/resume-screening-using-ai-ollama-models.git>
-cd resume-screener-backend
+🔍 Information extraction
 
----
+Name, Email, Phone number, Skills, Experience (basic)
 
-## 👨‍💻 Author
+📊 Resume–Job Description matching
 
-**Vedant Deshmukh**  
-B.Tech Computer Science Engineering  
-Intern – Artificial Intelligence & Data Science  
+Embedding-based semantic similarity
 
----
+TF-IDF + cosine similarity fallback
 
-## ⚠️ Disclaimer
+Keyword overlap scoring
 
-This project is built for learning and internship purposes.  
-All logic is implemented with a clear understanding and can be modified as per organizational requirements
+🤖 Optional LLM-based keyword extraction (Ollama)
+
+🧠 Robust fallback logic if AI models are unavailable
+
+🧩 Modular architecture for maintainability
+
+🔑 JWT-based authentication
+
+📤 Single & batch resume uploads
+
+🎯 Drag & drop file upload
+
+📈 Resume scoring & ranking
+
+✅ Candidate shortlisting & filtering
+
+⚡ Asynchronous FastAPI backend
+
+🖥 Responsive React frontend
+
+🏗️ System Architecture
+Frontend (React)
+   ↓
+FastAPI Backend
+   ↓
+Resume Parser → Text Cleaning
+   ↓
+Embedding / NLP Scoring
+   ↓
+Similarity Calculation
+   ↓
+Final Resume Score
+
+🧠 How the Scoring Works
+
+Resume Parsing
+
+Text is extracted from resumes using format-specific parsers.
+
+Text Preprocessing
+
+Cleaning, normalization, and tokenization.
+
+Embedding Generation
+
+Resumes and Job Descriptions are converted into vector embeddings.
+
+Similarity Calculation
+
+Cosine similarity is used to measure semantic relevance.
+
+TF-IDF and keyword overlap act as fallback mechanisms.
+
+Final Score
+
+A weighted score is generated and used to rank candidates.
+
+❓ Why RAG Is Not Used
+
+This project does not use RAG (Retrieval-Augmented Generation) because:
+
+Resume screening is a direct comparison problem, not a knowledge retrieval problem.
+
+There is no external document corpus to retrieve from.
+
+Embedding-based similarity is more efficient, interpretable, and cost-effective.
+
+RAG would be suitable only if resumes needed to be compared against a large external knowledge base.
+
+🧰 Tech Stack
+
+Frontend: React, Axios, Tailwind CSS
+
+Backend: Python, FastAPI, Uvicorn
+
+Authentication: JWT
+
+AI/NLP: Embeddings, TF-IDF, similarity scoring
+
+Storage: File system / optional database
+
+Caching (optional): Redis
+
+📦 Installation
+Backend (FastAPI)
+git clone https://github.com/vedantd802/resume-screening-using-ai-ollama-models.git
+cd resume-screening-using-ai-ollama-models
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+Frontend (React)
+cd frontend
+npm install
+npm start
+
+📊 Sample Output
+Candidate	Similarity Score	Status
+John Doe	0.82	Shortlisted
+Jane Smith	0.67	Review
+Alex Ray	0.45	Rejected
+🔮 Future Improvements
+
+Resume explanation using LLMs
+
+Skill-level extraction (beginner/intermediate/expert)
+
+Recruiter dashboard analytics
+
+Cloud deployment (AWS / Azure)
+
+Multi-job comparison support
+
+👨‍💻 Author
+
+Vedant Deshmukh
+B.Tech Computer Science Engineering
+Intern – Artificial Intelligence & Data Science
+
+⚠️ Disclaimer
+
+This project is built for learning and internship purposes.
+All logic is transparent, modular, and can be adapted for enterprise use.
